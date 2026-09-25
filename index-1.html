@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dirt Bike Tours Phuket | Honda CRF Rental & Guided Tours</title>
+  <meta name="description" content="Honda CRF dirt bike rental and guided tours in Phuket. Gear included. Contact us on WhatsApp for prices, availability and current conditions.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #f7f5f2;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.68)),
+                  url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1600&q=80') center/cover no-repeat;
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2.5rem 1.5rem;
+    }
+    .hero-content h1 {
+      font-size: clamp(2.3rem, 6.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.4px;
+    }
+    .hero-content h1 span { color: #f5a623; }
+    .hero-content p {
+      font-size: 1.15rem;
+      max-width: 540px;
+      margin: 0 auto 2rem;
+      opacity: 0.95;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.95rem 1.9rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .btn-primary {
+      background: #25D366;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #1ebe57;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.75);
+      margin-left: 0.7rem;
+    }
+    .btn-outline:hover {
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .section-title h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .section-title p {
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.4rem;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 1.7rem 1.4rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .feature-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.7rem;
+    }
+    .feature-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+    }
+    .feature-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item .caption {
+      padding: 1rem 1.1rem 1.2rem;
+    }
+    .gallery-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .gallery-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Note box */
+    .note {
+      background: #fff8e8;
+      border-left: 4px solid #f5a623;
+      padding: 1.3rem 1.4rem;
+      border-radius: 0 10px 10px 0;
+      margin: 2.5rem auto 0;
+      max-width: 700px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* Contact */
+    .contact {
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 18px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 1.5rem 3.5rem;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.7rem;
+    }
+    .contact p {
+      opacity: 0.92;
+      margin-bottom: 1.6rem;
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      justify-content: center;
+    }
+    .contact .btn-outline {
+      border-color: rgba(255,255,255,0.55);
+    }
+    .contact .btn-outline:hover {
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.8rem 1.5rem 2.8rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #25D366;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .btn-outline { margin-left: 0; margin-top: 0.6rem; }
+      .hero { min-height: 72vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Explore Phuket<br><span>on Honda CRF</span></h1>
+      <p>Dirt bike rental & guided tours. Gear included. Jungle trails, mountain roads and coastal viewpoints.</p>
+      <div>
+        <a href="https://wa.me/66846251083" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="https://maps.app.goo.gl/a8knsdrs3tMnfh6C6" class="btn btn-outline" target="_blank" rel="noopener">Location</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHAT WE OFFER -->
+  <section>
+    <div class="section-title">
+      <h2>CRF Rental & Tours</h2>
+      <p>Simple. Professional. Ready to ride.</p>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon">🏍️</div>
+        <h3>Honda CRF Bikes</h3>
+        <p>Well-maintained CRF250L & CRF300L ready for Phuket trails and mountain roads.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🛡️</div>
+        <h3>Gear Included</h3>
+        <p>Helmet and basic protective gear provided with every rental and tour.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🌴</div>
+        <h3>Real Phuket Routes</h3>
+        <p>Jungle tracks, rubber plantations, quiet coastal stretches and elevated viewpoints.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📍</div>
+        <h3>Flexible Options</h3>
+        <p>Guided tours or self-ride. We adapt to your experience and preferred pace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEWPOINTS -->
+  <section>
+    <div class="section-title">
+      <h2>Phuket Viewpoints</h2>
+      <p>Some of the routes take you to these classic lookouts</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Promthep Cape Phuket">
+        <div class="caption">
+          <h3>Promthep Cape</h3>
+          <p>Southern tip of Phuket. Dramatic cliffs and wide Andaman Sea views — famous for sunset.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80" alt="Karon Viewpoint Phuket three beaches">
+        <div class="caption">
+          <h3>Karon Viewpoint</h3>
+          <p>Classic three-beach panorama. Look down on Kata Noi, Kata and the long curve of Karon Beach.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80" alt="Black Rock Viewpoint Phuket">
+        <div class="caption">
+          <h3>Black Rock Viewpoint</h3>
+          <p>Elevated jungle viewpoint overlooking Nai Harn and the southern coastline. Quieter and more adventurous.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Note:</strong> Prices, availability, current weather conditions and full tour details are provided directly via WhatsApp. Please message us for the latest information.
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <h2>Ready to Ride?</h2>
+    <p>Message us on WhatsApp for current prices, bike availability, weather conditions and booking details. We reply quickly.</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/66846251083" class="btn btn-primary" target="_blank" rel="noopener">💬 WhatsApp +66 84 625 1083</a>
+      <a href="https://maps.app.goo.gl/a8knsdrs3tMnfh6C6" class="btn btn-outline" target="_blank" rel="noopener">📍 View Location</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Dirt Bike Tours Phuket</strong></p>
+    <p>Honda CRF Rental & Guided Tours • Phuket, Thailand</p>
+    <p style="margin-top: 0.7rem;">
+      <a href="https://wa.me/66846251083" target="_blank" rel="noopener">WhatsApp</a> · 
+      <a href="https://maps.app.goo.gl/a8knsdrs3tMnfh6C6" target="_blank" rel="noopener">Location</a>
+    </p>
+    <p style="margin-top: 1.1rem; font-size: 0.85rem;">© 2026 Dirt Bike Tours Phuket</p>
+  </footer>
+
+</body>
+</html>
